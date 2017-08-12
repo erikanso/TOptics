@@ -1,0 +1,149 @@
+html {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: Helvetica;
+  background-color: white;
+}
+
+body {
+  background-image: url("../images/glasses-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+
+.container {
+  width: 960px;
+  display: flex;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 1rem;
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 960px;
+  z-index: 5;
+}
+
+header img {
+  height: 1.5rem;
+  width: auto;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+nav {                         /* Not working */
+  margin-left: 19rem;
+}
+
+header a {
+  font-size: 1rem;
+  padding: 1rem 1rem;
+}
+
+.main-banner {              /* Not flexing */
+  width: 1032px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-banner .textbox {
+  background-color: white;
+  position: relative;
+  top: 10rem;
+  right: 0;
+  padding: 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main-banner h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.content {
+  position: relative;
+  top: 25rem;                 /* Alignment from top seems wrong */
+}
+
+.service-list,
+.philosophy-appointments {
+  display: flex;
+  justify-content: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  width: 5rem;
+  padding: 3rem 3rem;
+}
+
+.service img {              /* Need to size different sized images */
+  max-width: 5rem;
+  height: auto;
+  position: relative;
+  top: 0;
+  padding-bottom: 3.5px;
+}
+
+.service p {               /* Need to align text on bottom */
+
+}
+
+.philosophy,
+.appointments {
+  width: 35%;
+
+}
+
+.philosophy h2,
+.appointments h2 {
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 10rem;
+  padding: 0.5rem 1.25rem;
+}
+
+.philosophy p,
+.appointments p {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.philosophy {
+  padding-right: 5%;
+}
+
+footer {
+  background-color: azure;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer img {
+  padding: 4rem 1rem 4rem 4rem;
+  height: 1.5rem;
+}
+
+@media only screen and (max-width: 1032px;) {
+  header {
+    margin-top: 0;
+  }
+}
