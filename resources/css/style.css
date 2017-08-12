@@ -40,7 +40,7 @@ header p {
   font-size: 1rem;
 }
 
-nav {                         /* Not working */
+nav {                         /* Forced right align */
   margin-left: 19rem;
 }
 
@@ -49,7 +49,7 @@ header a {
   padding: 1rem 1rem;
 }
 
-.main-banner {              /* Not flexing */
+.main-banner {
   width: 1032px;
   display: flex;
   justify-content: flex-end;
@@ -90,6 +90,7 @@ header a {
   height: 8rem;
   width: 5rem;
   padding: 3rem 3rem;
+
 }
 
 .service img {              /* Need to size different sized images */
@@ -142,8 +143,27 @@ footer img {
   height: 1.5rem;
 }
 
-@media only screen and (max-width: 1032px;) {
+@media only screen and (max-width: 1032px) {
   header {
     margin-top: 0;
+    width: 100%;
+  }
+
+  nav {
+    margin-left: 0;       /* Needs to right align */
+  }
+
+  body {
+    height: 20rem;
+  }
+
+  .main-banner .textbox {
+    top: 5rem;
+    padding: 0.75rem 4rem;
+    margin-right: 20rem;
+  }
+
+  .main-banner h1 {
+    font-size: 1.33rem;
   }
 }
