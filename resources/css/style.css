@@ -41,7 +41,12 @@ header p {
 }
 
 nav {                         /* Forced right align */
-  margin-left: 19rem;
+  position: absolute;
+  right: 0;
+}
+
+nav .mobile-nav {
+  display: none;
 }
 
 header a {
@@ -90,6 +95,7 @@ header a {
   height: 8rem;
   width: 5rem;
   padding: 3rem 3rem;
+  text-align: center;
 
 }
 
@@ -160,10 +166,65 @@ footer img {
   .main-banner .textbox {
     top: 5rem;
     padding: 0.75rem 4rem;
-    margin-right: 20rem;
+    margin-right: 20rem;      /* Forced alignment */
   }
 
   .main-banner h1 {
     font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 17rem;
+  }
+
+  header p {
+    display: none;
+  }
+
+  nav .largescreen-nav {
+    display: none;
+  }
+
+  nav .mobile-nav {
+    display: flex;
+    
+  }
+
+  .main-banner .textbox {
+    width: 100%;
+    top: 9rem;
+    background-position: 20%;      /* Not right */
+    padding: 1rem 0;
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .service-list,
+  .philosophy-appointments {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .philosophy,
+  .appointments {
+    width: 100%;
+  }
+
+  .philosophy h2,
+  .appointments h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;      /* Looks shifted right of center */
+  }
+
+  footer img {
+    justify-content: center;      /* Not working */
+  }
+
+  footer p {
+    display: none;          /* Image not aligned center */
   }
 }
