@@ -227,26 +227,29 @@ footer img {
   .content {
     position: absolute;
     top: 17rem;
-    width: 90%;           /* Forced shrink because mysterious spillover */
+    width: 100%;           /* Forced shrink because mysterious spillover */
   }
 
   .service-list,
   .philosophy-appointments {
     display: flex;
     flex-direction: column;
-    width: 101%;
+    width: 101%;               /* Width to compensate for shrink? */
   }
 
   .service-list {
-    padding: 3.77rem 0;
-  }
+    padding: 2.23rem;       /* 3.77-1.54=2.23 */
+  }                         /* although vertical is supposed to overlap... */
 
   .service {
     padding-top: 1.54rem;
+    padding-left: 37%;      /* Forced center */
+    height: auto;
   }
 
   .service p {
     font-size: 0.77rem;
+    padding-top: 1rem;
   }
 
   .philosophy,
@@ -265,11 +268,11 @@ footer img {
   .philosophy p,
   .appointments p {
     font-size: 0.77rem;
-    padding-left: 1rem;
+    padding-left: 1rem;     /* Bonus improvement! */
   }
 
   footer {
-    width: 135%;
+    width: 10%;        /* Short on right, this "width" isn't affecting it */
   }
 
   footer img {
