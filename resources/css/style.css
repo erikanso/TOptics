@@ -187,13 +187,14 @@ footer img {
 }
 
 @media only screen and (max-width: 600px) {
+  header p {
+    display: none;
+  }
+
   body {
     height: 17rem;
     background-position: 20%;
-  }
-
-  header p {
-    display: none;
+    width: 100%;
   }
 
   nav .largescreen-nav {
@@ -206,14 +207,17 @@ footer img {
   }
 
   .main-banner {
+    display: flex;
     right: 0;
     top: 12rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .main-banner .textbox {
-
-    padding: 1rem 0;
-    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
   }
 
   .main-banner h1{
@@ -223,17 +227,18 @@ footer img {
   .content {
     position: absolute;
     top: 17rem;
+    width: 90%;           /* Forced shrink because mysterious spillover */
   }
 
   .service-list,
   .philosophy-appointments {
     display: flex;
     flex-direction: column;
+    width: 101%;
   }
 
   .service-list {
     padding: 3.77rem 0;
-
   }
 
   .service {
@@ -247,19 +252,24 @@ footer img {
   .philosophy,
   .appointments {
     width: 100%;
-    padding-bottom: 1rem;        /* Extra padding from somewhere... */ 
+    padding-bottom: 1rem;
   }
 
   .philosophy h2,
   .appointments h2 {
     width: 100%;
     display: flex;
-    justify-content: center;      /* Width allows scroll, also textbox */
-  }                               /* meaning 100% is actually more */
+    justify-content: center;
+  }
 
   .philosophy p,
   .appointments p {
     font-size: 0.77rem;
+    padding-left: 1rem;
+  }
+
+  footer {
+    width: 135%;
   }
 
   footer img {
